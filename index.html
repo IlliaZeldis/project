@@ -29,10 +29,21 @@
         </div>
     </header>
     <main>
+        <select name="news-filter" class="filter">
+            <option value="archetucture">Архітектура</option>
+            <option value="books">Читання</option>
+            <option value="shipping">Shipping</option>
+            <option value="music">Музика</option>
+            <option value="cars">Машини</option>
+            <option value="trip">Подорожі</option>
+            <option value="strim">Стріми</option>
+            <option value="teen">Підлітки</option>
+            <option value="all" selected>Всі новини</option>
+        </select>
         <section class="news-section">
             <div id="news-container" class="list-view">
                 <a href="forums/stattya1.html">
-                    <article>
+                    <article class="news_article" data-category="books">
                         <h4>Як читання змінює життя.</h4>
                         <p>
                             Книги — це подорожі в інші культури, епохи та світи, які недоступні в повсякденному житті.
@@ -41,117 +52,54 @@
                     </article>
                 </a>
                 <a href="forums/stattya2.html">
-                    <article>
+                    <article class="news_article" data-category="archetucture">
                         <h4>Бруталізм в архітектурі</h4>
                         <p>Чи знали ви, що панельки - це архітектурний стиль, який був придуманий в Англії в XX столітті?</p>
                         <time>15.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya3.html">
-                    <article>
+                    <article class="news_article" data-category="shipping">
                         <h4>Shipping container</h4>
                         <p>They are an economical, quick, and eco-friendly way of construction.</p>
                         <time>15.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya4.html">
-                    <article>
+                    <article class="news_article" data-category="music">
                         <h4>Музика як відображення різноманітності</h4>
                         <p>Вона торкається серця, виявляє сутність культури та показує, як виразно ми відрізняємося один від одного.</p>
                         <time>15.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya5.html">
-                    <article>
+                    <article class="news_article" data-category="cars">
                         <h4>Світ ретро автомобілів</h4>
                         <p>Ретро-автомобілі - це символ ностальгії, стилю та інженерії.</p>
                         <time>15.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya6.html">
-                    <article>
+                    <article class="news_article" data-category="trip">
                         <h4>Подорож мрії: відкриваючи приховані перлини Європи</h4>
                         <p>Європа — континент, який зачаровує мандрівників своєю багатою історією, культурою та краєвидами.</p>
                         <time>15.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya7.html">
-                    <article>
+                    <article class="news_article" data-category="strim">
                         <h4>Стримерство</h4>
                         <p>Стрімер — це людина, яка веде прямі трансляції (стріми) через інтернет на різних платформах.</p>
                         <time>16.12.24</time>
                     </article>
                 </a>
                 <a href="forums/stattya8.html">
-                    <article>
+                    <article class="news_article" data-category="teen">
                         <h4>Підлітковий вік - найкращий час у житті?</h4>
                         <p>Підлітковий вік — це час неймовірних змін і безмежних можливостей.</p>
                         <time>16.12.24</time>
                     </article>
                 </a>
-                <!-- <a href="forums/stattya9.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>16.12.24</time>
-                    </article>
-                </a>
-                <a href="forums/stattya10.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>16.12.24</time>
-                    </article>
-                </a> -->
-                <!-- <a href="forums/stattya11.html">    
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya12.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya13.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya14.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya15.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya16.html">    
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a>
-                <a href="forums/stattya17.html">
-                    <article>
-                        <h4>Назва статті</h4>
-                        <p>Опис.</p>
-                        <time>Дата</time>
-                    </article>
-                </a> -->
             </div>
         </section>
         <button class="up-button" id="upButton">↑</button>

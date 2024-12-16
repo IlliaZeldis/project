@@ -5,6 +5,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -70,6 +71,9 @@ header h2 a{
   padding: 10px 15px;
   border-radius: 5px;
   display: block;
+}
+.hidden {
+  display: none;
 }
 .menu ul li a:hover {
   background-color: #4caf50;

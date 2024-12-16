@@ -10,13 +10,24 @@ themeToggle.addEventListener('click', () => {
 const burgerMenu = document.querySelector('.burger-menu');
 const menu = document.querySelector('.menu');
 burgerMenu.addEventListener('click', () => {
-  // menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  // burgerMenu.classList.toggle('active');
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
   } else {
     menu.style.display = 'block';
   }  
+});
+const articles = document.querySelectorAll('.news_article');
+const filter = document.querySelector('.filter');
+filter.addEventListener('change', (event) => {
+    const selectedCategory = event.target.value;
+    articles.forEach((article) => {
+        const articleCategory = article.dataset.category; 
+        if (selectedCategory === 'all' || articleCategory === selectedCategory) {
+            article.classList.remove('hidden'); 
+        } else {
+            article.classList.add('hidden'); 
+        }
+    });
 });
 const listViewBtn = document.getElementById('list-view-btn');
 const gridViewBtn = document.getElementById('grid-view-btn');
