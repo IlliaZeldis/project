@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бургер-меню з форумом</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="light-theme">
+  <div class="burger-menu">
+    <button onclick="toggleTheme()">
+      🌙
+    </button>
+    <a href="#" class="burger-menu_button" aria-label="Відкрити меню">
+      <span class="burger-menu_lines"></span>
+    </a>
+    <nav class="burger-menu_nav">
+      <a href="../index.html" class="burger-menu_link">Форум</a>
+      <a href="../about_us.html" class="burger-menu_link">Автори</a>
+    </nav>
+    <div class="burger-menu_overlay"></div>
+  </div>
+  <div class="forum" id="forum">
+    <h1>Форум</h1>
+    <p>
+      Підлітковий вік — це час неймовірних змін і безмежних можливостей. Це період, коли все здається можливим: ви відкриваєте нові горизонти, шукаєте себе та визначаєте свої мрії. Ваше життя сповнене енергією, емоціями та першими важливими досягненнями. Саме в цей час ви формуєте свої переконання, знаходите справжніх друзів і переживаєте найяскравіші моменти, які залишаються в пам’яті назавжди. У підлітковому віці ви не боїтесь мріяти, експериментувати і ставити великі цілі, тому цей час часто стає найкращим і найзапам’ятовуванішим у житті.
+    </p>
+    <br>
+    <div class="comment-box">
+      <input type="text" id="newComment" placeholder="Напишіть ваш коментар">
+      <button onclick="addComment()">Додати коментар</button>
+    </div>
+    <button class="heart" type="button">
+      <span>♥</span>
+      <span class="likes-number">0</span>
+    </button>
+    <ul class="comments" id="comments"></ul>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

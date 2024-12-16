@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+body.dark-theme {
+    background-color: #121212;
+    color: #ddd;
+}
+p{
+    text-align: justify;
+}
+.burger-menu_nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #F9AFE9;
+    overflow-y: auto;
+    right: -100%;
+    transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    transition: 0.4s;
+}
+.burger-menu_link {
+    padding: 18px 35px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #BB1E99;
+    border-bottom: 1px solid #fff;
+}
+.burger-menu_link:first-child {
+    border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+    filter: brightness(0.9);
+}
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.forum {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.forum h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.comment-box input, .comment-box button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.comment-box button {
+    background: #BB1E99;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.comment-box button:hover {
+    background: #9a187f;
+}
+.comments {
+    list-style: none;
+    padding: 0;
+}
+.comments li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comments li.editing {
+    background-color: #fef2e4;
+}
+.comment-actions {
+    display: flex;
+    gap: 10px;
+}
+.comment-actions button {
+    background: #FF6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.comment-actions button:hover {
+    background: #D23F2A;
+}
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #6200ea; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    background-color: #3700b3; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}  
+button:active {
+    background-color: #6200ea; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+.burger-menu_button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #6200ea; 
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.burger-menu_button:hover {
+    background-color: #3700b3;
+}
+.burger-menu_button:active {
+    transform: scale(0.95);
+}
+.burger-menu_lines {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+} 
+.burger-menu_lines::before, .burger-menu_lines::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+.burger-menu_lines::before {
+    top: -8px;
+}  
+.burger-menu_lines::after {
+    bottom: -8px;
+}
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+} 
+.burger-menu_active .burger-menu_lines::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}  
+.burger-menu_active .burger-menu_lines::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}  

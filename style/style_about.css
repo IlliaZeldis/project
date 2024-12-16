@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: olive;
+  color: #333;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+header h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.about-me {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 20px; 
+  color: white;
+}
+main{
+  color: white;
+}
+.about-me img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+.about-me .intro-text {
+  flex: 1; 
+  font-size: 1.2em;
+}
+a{
+  color: white;
+}
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+nav .menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+nav .menu li a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+body.dark-theme {
+  background-color: #333;
+  color: #f9f9f9;
+}
+body.dark-theme header {
+  background-color: #222;
+}
+body.dark-theme nav .menu li a {
+  color: #f9f9f9;
+}
+body.dark-theme nav .menu li a:hover {
+  background-color: #4caf50;
+}
+body.dark-theme footer p {
+    color: black;
+}
+main {
+  padding: 20px;
+}
+.about-me {
+  font-size: 1.2em;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .burger-menu {
+    display: flex;
+  }
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  nav .menu.active {
+    display: flex;
+  }
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me img {
+    width: 150px;
+    height: 150px;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  header h2 {
+    font-size: 18px;
+  }
+  .about-me .intro-text {
+    font-size: 1em;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.9em;
+  }
+}
